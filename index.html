@@ -1,0 +1,1600 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Coding Journey | Hero Coder</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800|Open+Sans:400,600"
+          rel="stylesheet">
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f4f7fb;
+            color: #263648;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            color: #102a43;
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: #718096;
+            font-size: 16px;
+        }
+
+        .title-line {
+            width: 65px;
+            height: 4px;
+            background: #18b6a4;
+            margin: 18px auto;
+            border-radius: 5px;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background: rgba(9, 23, 43, .97);
+            border: none;
+            border-radius: 0;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            display: inline-block;
+            background: #18b6a4;
+            color: white;
+            padding: 7px 10px;
+            border-radius: 8px;
+            margin-right: 7px;
+        }
+
+        .navbar-nav > li > a {
+            color: #dce7f2 !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav > li > a:hover,
+        .navbar-nav > .active > a {
+            background: #18b6a4 !important;
+            color: white !important;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            min-height: 680px;
+
+            padding: 150px 0 100px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(7, 22, 42, .92),
+                    rgba(10, 103, 111, .78)
+                ),
+
+                url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            border: 1px solid #5eead4;
+            border-radius: 30px;
+            color: #5eead4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.2;
+            font-weight: 800;
+            margin-top: 25px;
+        }
+
+        .hero h1 span {
+            color: #5eead4;
+        }
+
+        .hero p {
+            font-size: 20px;
+            line-height: 1.9;
+            color: #e5edf5;
+            max-width: 750px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .btn-main {
+            background: #18b6a4;
+            border: 2px solid #18b6a4;
+            color: white;
+            padding: 13px 27px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .btn-main:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 13px 27px;
+            border-radius: 30px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #102a43;
+        }
+
+
+        /* ================= ABOUT ================= */
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(16, 42, 67, .08);
+        }
+
+        .about-card h3 {
+            color: #18a6a6;
+            font-weight: 700;
+        }
+
+        .about-card p {
+            font-size: 16px;
+            line-height: 1.9;
+            color: #596b7d;
+        }
+
+        .student-image {
+            width: 230px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 12px 35px rgba(0,0,0,.15);
+        }
+
+        .hero-coder-logo {
+            margin-top: 25px;
+            font-size: 23px;
+            font-family: 'Montserrat';
+            font-weight: 800;
+            color: #102a43;
+        }
+
+        .hero-coder-logo span {
+            color: #18b6a4;
+        }
+
+
+        /* ================= JOURNEY ================= */
+
+        .journey-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            border-left: 5px solid #18b6a4;
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .journey-number {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            background: #18b6a4;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .journey-card h3 {
+            display: inline-block;
+            color: #102a43;
+        }
+
+        .journey-card p {
+            line-height: 1.8;
+            color: #657789;
+        }
+
+
+        /* ================= SKILLS ================= */
+
+        .skill-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+
+        .skill-card h4 {
+            font-weight: 700;
+        }
+
+        .progress {
+            height: 23px;
+            border-radius: 20px;
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            line-height: 23px;
+        }
+
+
+        /* ================= PROJECTS ================= */
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: #102a43;
+            font-weight: 700;
+        }
+
+        .project-content p {
+            color: #68798a;
+            line-height: 1.7;
+        }
+
+
+        /* ================= BOOTSTRAP SHOWCASE ================= */
+
+        .component-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.06);
+        }
+
+
+        /* ================= TESTIMONIAL ================= */
+
+        .testimonial {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b243d,
+                    #116c73
+                );
+
+            color: white;
+            padding: 70px 30px;
+            text-align: center;
+        }
+
+        .testimonial h2 {
+            font-weight: 800;
+        }
+
+        .testimonial p {
+            max-width: 800px;
+            margin: 25px auto;
+            font-size: 20px;
+            line-height: 1.9;
+            color: #e6f5f5;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0,0,0,.08);
+        }
+
+        .form-control {
+            height: 45px;
+            border-radius: 6px;
+        }
+
+        textarea.form-control {
+            height: 130px;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #08182c;
+            color: #b9c9d9;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        footer h3 {
+            color: white;
+            font-weight: 800;
+        }
+
+        footer a {
+            color: #5eead4;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 767px) {
+
+            .hero {
+                text-align: center;
+                padding: 120px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-buttons .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body data-spy="scroll"
+      data-target=".navbar"
+      data-offset="70">
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#heroNavbar">
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+
+            <!-- LOGO -->
+
+            <a class="navbar-brand" href="#home">
+
+                <span class="logo-icon">
+                    &lt;/&gt;
+                </span>
+
+                Hero Coder
+
+            </a>
+
+        </div>
+
+
+        <div class="collapse navbar-collapse"
+             id="heroNavbar">
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="active">
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">My Story</a>
+                </li>
+
+                <li>
+                    <a href="#journey">Journey</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                MY CODING JOURNEY
+            </span>
+
+
+            <h1>
+
+                From Learning Code
+                <br>
+
+                To <span>Building My Ideas</span>
+
+            </h1>
+
+
+            <p>
+
+                My programming journey started at
+                <strong>Hero Coder</strong>.
+
+                What started as learning the basics
+                became a passion for creating websites,
+                solving problems and building real projects.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#journey"
+                   class="btn btn-main">
+
+                    <span class="glyphicon glyphicon-road"></span>
+
+                    Explore My Journey
+
+                </a>
+
+
+                <a href="https://www.herocoder.online"
+                   target="_blank"
+                   class="btn btn-outline">
+
+                    Visit Hero Coder
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My Story With Hero Coder</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                More than learning code — learning how to think.
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-md-4 text-center">
+
+                <!-- Replace this image with student's photo -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=500&q=80"
+                    class="student-image">
+
+                <div class="hero-coder-logo">
+
+                    HERO <span>CODER</span>
+
+                </div>
+
+                <p>
+                    Programming Education
+                </p>
+
+            </div>
+
+
+            <div class="col-md-8">
+
+                <div class="about-card">
+
+                    <h3>
+                        How Hero Coder Changed My Learning Journey
+                    </h3>
+
+
+                    <p>
+
+                        When I started learning programming,
+                        I thought coding was just about writing
+                        lines of code.
+
+                    </p>
+
+
+                    <p>
+
+                        At Hero Coder, I discovered that programming
+                        is much more than that.
+
+                        It taught me how to think logically,
+                        solve problems, create ideas and turn
+                        those ideas into real projects.
+
+                    </p>
+
+
+                    <p>
+
+                        Each level prepared me for the next one.
+
+                        HTML taught me structure,
+                        CSS taught me design,
+                        Bootstrap taught me how to build
+                        responsive websites,
+                        and JavaScript helped me make my
+                        websites interactive.
+
+                    </p>
+
+
+                    <div class="well well-lg">
+
+                        <strong>
+
+                            <span class="glyphicon glyphicon-star"></span>
+
+                            What I gained:
+
+                        </strong>
+
+                        Confidence • Creativity • Problem Solving •
+                        Programming Skills
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JOURNEY ================= -->
+
+<section id="journey"
+         class="section"
+         style="background:#eef5f7;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>My Learning Journey</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                Every step helped me reach the next one.
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        01
+                    </span>
+
+                    <h3>My First Step</h3>
+
+                    <p>
+
+                        I started by learning the basics
+                        of programming and understanding
+                        how programmers think.
+
+                    </p>
+
+                </div>
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        02
+                    </span>
+
+                    <h3>HTML</h3>
+
+                    <p>
+
+                        I learned how to build the structure
+                        of websites using headings, paragraphs,
+                        images, links, tables and forms.
+
+                    </p>
+
+                </div>
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        03
+                    </span>
+
+                    <h3>CSS</h3>
+
+                    <p>
+
+                        I learned how to transform simple
+                        webpages into attractive designs
+                        using colors, backgrounds, spacing,
+                        shadows and layouts.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-6">
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        04
+                    </span>
+
+                    <h3>Bootstrap 3</h3>
+
+                    <p>
+
+                        Bootstrap helped me understand
+                        responsive design and build complete
+                        websites using professional components.
+
+                    </p>
+
+                </div>
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        05
+                    </span>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+
+                        JavaScript taught me how to make
+                        websites interactive and improve
+                        my logical thinking.
+
+                    </p>
+
+                </div>
+
+
+                <div class="journey-card">
+
+                    <span class="journey-number">
+                        06
+                    </span>
+
+                    <h3>jQuery</h3>
+
+                    <p>
+
+                        jQuery helped me create dynamic
+                        webpages and understand events,
+                        animations and changing webpage content.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>What I Can Do Now</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                Skills I developed through practice and projects.
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-md-6">
+
+                <div class="skill-card">
+
+                    <h4>
+                        HTML & CSS
+                        <span class="badge pull-right">
+                            90%
+                        </span>
+                    </h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-success"
+                             style="width:90%;">
+
+                            90%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h4>
+                        Bootstrap 3
+                        <span class="badge pull-right">
+                            85%
+                        </span>
+                    </h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-info"
+                             style="width:85%;">
+
+                            85%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+
+                <div class="skill-card">
+
+                    <h4>
+                        JavaScript
+                        <span class="badge pull-right">
+                            70%
+                        </span>
+                    </h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-warning"
+                             style="width:70%;">
+
+                            70%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card">
+
+                    <h4>
+                        jQuery
+                        <span class="badge pull-right">
+                            60%
+                        </span>
+                    </h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar progress-bar-danger"
+                             style="width:60%;">
+
+                            60%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects"
+         class="section"
+         style="background:#eef5f7;">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Projects I Created</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                Learning became real when I started building.
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80">
+
+                    <div class="project-content">
+
+                        <span class="label label-primary">
+                            HTML & CSS
+                        </span>
+
+                        <h3>My First Website</h3>
+
+                        <p>
+
+                            My first complete website
+                            built using HTML and CSS.
+
+                        </p>
+
+                        <button class="btn btn-primary"
+                                data-toggle="modal"
+                                data-target="#project1">
+
+                            View Details
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80">
+
+                    <div class="project-content">
+
+                        <span class="label label-success">
+                            Bootstrap 3
+                        </span>
+
+                        <h3>Responsive Website</h3>
+
+                        <p>
+
+                            A complete responsive website
+                            using Bootstrap components.
+
+                        </p>
+
+                        <button class="btn btn-success"
+                                data-toggle="tooltip"
+                                title="Created while learning Bootstrap 3">
+
+                            Project Info
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80">
+
+                    <div class="project-content">
+
+                        <span class="label label-warning">
+                            JavaScript
+                        </span>
+
+                        <h3>Interactive Project</h3>
+
+                        <p>
+
+                            A project where I used JavaScript
+                            to add interaction and logic.
+
+                        </p>
+
+                        <button class="btn btn-warning"
+                                data-toggle="popover"
+                                data-placement="top"
+                                title="My JavaScript Project"
+                                data-content="This project helped me practice functions, events and logical thinking.">
+
+                            Learn More
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOTSTRAP SKILLS ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>What Bootstrap 3 Taught Me</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                One of the most important steps in my web development journey.
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+
+            <div class="col-md-4">
+
+                <div class="component-box">
+
+                    <h3>
+                        <span class="glyphicon glyphicon-th"></span>
+                        Grid System
+                    </h3>
+
+                    <p>
+                        I learned how to organize a webpage
+                        into responsive rows and columns.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="component-box">
+
+                    <h3>
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                        Components
+                    </h3>
+
+                    <p>
+                        Navbar, Panels, Buttons, Alerts,
+                        Tables, Forms and many more components.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="component-box">
+
+                    <h3>
+                        <span class="glyphicon glyphicon-phone"></span>
+                        Responsive Design
+                    </h3>
+
+                    <p>
+                        I learned how websites can adapt
+                        to different screen sizes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Tabs -->
+
+        <ul class="nav nav-tabs">
+
+            <li class="active">
+                <a data-toggle="tab" href="#webSkills">
+                    Web Development
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#programmingSkills">
+                    Programming
+                </a>
+            </li>
+
+            <li>
+                <a data-toggle="tab" href="#futureSkills">
+                    Future
+                </a>
+            </li>
+
+        </ul>
+
+
+        <div class="tab-content">
+
+            <div id="webSkills"
+                 class="tab-pane fade in active">
+
+                <br>
+
+                <div class="alert alert-info">
+
+                    HTML → CSS → Bootstrap → JavaScript → jQuery
+
+                </div>
+
+            </div>
+
+
+            <div id="programmingSkills"
+                 class="tab-pane fade">
+
+                <br>
+
+                <div class="alert alert-success">
+
+                    Problem Solving → Logic → Programming → Projects
+
+                </div>
+
+            </div>
+
+
+            <div id="futureSkills"
+                 class="tab-pane fade">
+
+                <br>
+
+                <div class="alert alert-warning">
+
+                    Advanced JavaScript → React → More Projects
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THANK YOU ================= -->
+
+<section class="testimonial">
+
+    <div class="container">
+
+        <h2>
+            More Than A Coding Course
+        </h2>
+
+        <p>
+
+            "Hero Coder helped me discover that programming
+            is not just about writing code.
+
+            It is about thinking, creating,
+            solving problems and believing
+            that I can build something from my own ideas."
+
+        </p>
+
+        <span class="label label-info">
+            My Journey Continues
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Let's Connect</h2>
+
+            <div class="title-line"></div>
+
+            <p>
+                Want to learn more about my journey?
+            </p>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-7">
+
+                <div class="contact-box">
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label>Name</label>
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Your Name">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="Your Email">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Message</label>
+
+                            <textarea
+                                class="form-control"
+                                placeholder="Write your message..."></textarea>
+
+                        </div>
+
+
+                        <button type="submit"
+                                class="btn btn-success">
+
+                            <span class="glyphicon glyphicon-send"></span>
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-5">
+
+                <div class="panel panel-info">
+
+                    <div class="panel-heading">
+
+                        About Hero Coder
+
+                    </div>
+
+                    <div class="panel-body">
+
+                        <p>
+
+                            Hero Coder is a programming education
+                            platform focused on helping young learners
+                            discover coding through practical learning.
+
+                        </p>
+
+
+                        <hr>
+
+
+                        <p>
+
+                            <span class="glyphicon glyphicon-globe"></span>
+
+                            <strong>Website</strong>
+
+                        </p>
+
+                        <p>
+
+                            <a href="https://www.herocoder.online"
+                               target="_blank">
+
+                                www.herocoder.online
+
+                            </a>
+
+                        </p>
+
+
+                        <br>
+
+
+                        <a href="https://www.herocoder.online"
+                           target="_blank"
+                           class="btn btn-primary btn-block">
+
+                            Visit Hero Coder
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="project1"
+     class="modal fade"
+     role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal">
+
+                    &times;
+
+                </button>
+
+                <h4 class="modal-title">
+
+                    My First Website
+
+                </h4>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <p>
+
+                    This project was one of the first steps
+                    in my web development journey.
+
+                    I used HTML and CSS to create the
+                    structure and design of the website.
+
+                </p>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>
+
+            <span class="logo-icon">
+                &lt;/&gt;
+            </span>
+
+            Hero Coder
+
+        </h3>
+
+
+        <p>
+
+            Learn • Build • Create • Grow
+
+        </p>
+
+
+        <p>
+
+            <a href="https://www.herocoder.online"
+               target="_blank">
+
+                www.herocoder.online
+
+            </a>
+
+        </p>
+
+
+        <hr>
+
+
+        <p>
+
+            My Coding Journey — Designed by a Hero Coder Student
+
+        </p>
+
+        <p>
+
+            © 2026 Hero Coder
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= SCRIPTS ================= -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+</script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        // Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Popover
+        $('[data-toggle="popover"]').popover();
+
+    });
+
+</script>
+
+
+</body>
+</html>
+```
